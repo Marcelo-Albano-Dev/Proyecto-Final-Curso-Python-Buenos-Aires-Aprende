@@ -1,49 +1,39 @@
-# Proyecto Final - Curso Python Buenos Aires Aprende
+# Proyecto Final - Python
 
-Sistema de inventario desarrollado en Python con SQLite para registrar y administrar productos.
+Este es mi proyecto final para el curso Python de Buenos Aires Aprende.
 
-## Funcionalidades
+El programa consiste en un inventario sencillo de productos. La información se guarda en una base de datos SQLite para que no se pierda al cerrar el programa.
 
-- Registrar nuevos productos.
-- Visualizar todos los productos.
-- Buscar un producto por ID.
-- Actualizar los datos de un producto.
+## Qué se puede hacer
+
+Desde el menú principal se puede:
+
+- Agregar productos.
+- Ver todos los productos cargados.
+- Buscar un producto por su ID.
+- Modificar los datos de un producto.
 - Eliminar productos.
-- Generar reportes de productos con bajo stock.
-- Persistir la información en la base de datos `inventario.db`.
+- Ver qué productos tienen poco stock.
 
-## Requisitos
+## Cómo ejecutarlo
 
-- Python 3.10 o superior.
-
-No se necesitan paquetes externos: el proyecto utiliza `sqlite3`, incluido en Python.
-
-## Ejecución
-
-Desde la carpeta del proyecto, ejecutar:
+Se necesita tener Python instalado. Desde la carpeta del proyecto, ejecutar:
 
 ```bash
 python main.py
 ```
 
-La aplicación crea automáticamente la tabla `productos` si todavía no existe.
+La base de datos utilizada es `inventario.db`. Si la tabla todavía no existe, el programa la crea automáticamente al iniciarse.
 
-## Estructura del proyecto
+## Archivos principales
 
 ```text
 .
-├── main.py          # Menú principal e interacción con el usuario
-├── operaciones.py   # Operaciones sobre la base de datos
-└── inventario.db    # Base SQLite con los productos cargados
+├── main.py
+├── operaciones.py
+└── inventario.db
 ```
 
-## Modelo de datos
-
-La tabla `productos` contiene los siguientes campos:
-
-- `id`: identificador único.
-- `nombre`: nombre del producto.
-- `descripcion`: descripción breve.
-- `cantidad`: stock disponible.
-- `precio`: precio del producto.
-- `categoria`: categoría del producto.
+- `main.py`: contiene el menú y la interacción con el usuario.
+- `operaciones.py`: contiene las funciones para trabajar con la base de datos.
+- `inventario.db`: base de datos con los productos de ejemplo.
